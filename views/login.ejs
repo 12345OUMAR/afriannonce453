@@ -1,0 +1,7 @@
+<% layout('layout') -%>
+<h1><%= __('login') %></h1>
+<form method="POST" action="/login">
+  <input name="username" placeholder="username" required>
+  <input type="password" name="password" placeholder="password" required>
+  <button type="submit"><%= __('login') %></button>
+</form>

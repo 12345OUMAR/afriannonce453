@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= __('title') %></title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>:root{--theme-color:<%= themeColor %>}</style>
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <% if(!user){ %>
+    <a href="/register"><%= __('register') %></a>
+    <a href="/login"><%= __('login') %></a>
+    <% } else { %>
+    <a href="/logout"><%= __('logout') %></a>
+    <% } %>
+    <a href="/admin"><%= __('admin') %></a>
+  </nav>
+  <%- body %>
+  <script src="/js/app.js"></script>
+</body>
+</html>

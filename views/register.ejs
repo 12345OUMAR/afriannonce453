@@ -1,0 +1,7 @@
+<% layout('layout') -%>
+<h1><%= __('register') %></h1>
+<form method="POST" action="/register">
+  <input name="username" placeholder="username" required>
+  <input type="password" name="password" placeholder="password" required>
+  <button type="submit"><%= __('register') %></button>
+</form>
