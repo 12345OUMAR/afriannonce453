@@ -1,0 +1,7 @@
+<% layout('layout') -%>
+<h1><%= __('admin') %></h1>
+<form method="POST" action="/admin/color">
+  <label><%= __('color_label') %></label>
+  <input name="color" value="<%= themeColor %>">
+  <button type="submit"><%= __('save') %></button>
+</form>
